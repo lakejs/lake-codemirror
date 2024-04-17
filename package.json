@@ -1,0 +1,77 @@
+{
+  "name": "lake-codemirror",
+  "version": "1.0.0",
+  "description": "CodeMirror for Lake",
+  "keywords": [
+    "rich text",
+    "wysiwyg",
+    "editor"
+  ],
+  "homepage": "http://lakejs.com",
+  "bugs": {
+    "url": "https://github.com/lakejs/lake/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakejs/lake.git"
+  },
+  "license": "MIT",
+  "author": "Luo Longhao <luolonghao@gmail.com>",
+  "main": "./lib/codemirror.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist ./lib && rollup --config rollup.config.mjs",
+    "sort:package": "sort-package-json",
+    "lint": "eslint . --config .eslintrc.cjs --ext \".ts,.js,.cjs,.mjs\"",
+    "release": "node ./release.mjs"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm sort:package && pnpm lint"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.3.3",
+    "@codemirror/lang-cpp": "^6.0.2",
+    "@codemirror/lang-css": "^6.2.1",
+    "@codemirror/lang-go": "^6.0.0",
+    "@codemirror/lang-html": "^6.4.8",
+    "@codemirror/lang-java": "^6.0.1",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/lang-markdown": "^6.2.4",
+    "@codemirror/lang-php": "^6.0.1",
+    "@codemirror/lang-python": "^6.1.5",
+    "@codemirror/lang-rust": "^6.0.1",
+    "@codemirror/lang-sql": "^6.6.3",
+    "@codemirror/lang-xml": "^6.1.0",
+    "@codemirror/lang-yaml": "^6.1.0",
+    "@codemirror/language": "^6.10.1",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.26.1",
+    "@lezer/highlight": "^1.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "execa": "^8.0.1",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.14.0",
+    "semver": "^7.6.0",
+    "simple-git-hooks": "^2.11.1",
+    "sort-package-json": "^2.10.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.4"
+  },
+  "packageManager": "pnpm@8.15.6"
+}
