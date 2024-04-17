@@ -10,7 +10,7 @@ function getCodeMirrorBuildConfig(type) {
         file: './dist/codemirror.min.js',
         format: 'iife',
         name: 'CodeMirror',
-        sourcemap: true,
+        sourcemap: false,
         plugins: [terser()],
       },
       plugins: [
@@ -24,10 +24,9 @@ function getCodeMirrorBuildConfig(type) {
     output: {
       file: './lib/codemirror.js',
       format: 'es',
-      sourcemap: true,
+      sourcemap: false,
     },
     plugins: [
-      nodeResolve(),
       typescript(),
     ],
   };
