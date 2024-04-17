@@ -25,9 +25,9 @@
   ],
   "scripts": {
     "build": "rimraf ./dist ./lib && rollup --config rollup.config.mjs",
-    "sort:package": "sort-package-json",
     "lint": "eslint . --config .eslintrc.cjs --ext \".ts,.js,.cjs,.mjs\"",
-    "release": "node ./release.mjs"
+    "release": "node ./release.mjs",
+    "sort:package": "sort-package-json"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm sort:package && pnpm lint"

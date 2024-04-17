@@ -1,0 +1,12 @@
+*~
+~*
+.DS_Store
+Thumbs.db
+desktop.ini
+/.vscode
+/node_modules
+/temp
+/dist
+/lib
+.pnpm-debug.log
+rollup.config-*.mjs

@@ -1,0 +1,17 @@
+{
+  "include": [
+    "src/codemirror.ts",
+  ],
+  "compilerOptions": {
+    "outDir": "temp",
+    "moduleResolution": "node",
+    "target": "es6",
+    "allowJs": false,
+    "removeComments": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+  }
+}
