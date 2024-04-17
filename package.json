@@ -1,6 +1,6 @@
 {
   "name": "lake-codemirror",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "CodeMirror for Lake",
   "keywords": [
     "rich text",
