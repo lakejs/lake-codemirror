@@ -1,6 +1,6 @@
 # CodeMirror for Lake
 
-This package provides a CodeMirror configuration for [Lake](http://lakejs.com/).
+This package provides a CodeMirror configuration for [Lake](http://lakejs.org/).
 
 ## CDN
 
