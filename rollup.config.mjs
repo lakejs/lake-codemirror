@@ -9,7 +9,7 @@ function getCodeMirrorBuildConfig(type) {
       output: {
         file: './dist/codemirror.min.js',
         format: 'iife',
-        name: 'CodeMirror',
+        name: 'LakeCodeMirror',
         sourcemap: false,
         plugins: [terser()],
       },
@@ -24,10 +24,16 @@ function getCodeMirrorBuildConfig(type) {
     output: {
       file: './lib/codemirror.js',
       format: 'es',
-      sourcemap: false,
+      sourcemap: true,
     },
     plugins: [
-      typescript(),
+      typescript({
+        compilerOptions: {
+          rootDir: './src',
+          declaration: true,
+          declarationDir: './types',
+        },
+      }),
     ],
   };
 }

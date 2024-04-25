@@ -18,6 +18,7 @@
   "license": "MIT",
   "author": "Luo Longhao <luolonghao@gmail.com>",
   "main": "./lib/codemirror.js",
+  "types": "./lib/types/codemirror.d.ts",
   "files": [
     "dist",
     "lib"
