@@ -15,7 +15,11 @@ function getCodeMirrorBuildConfig(type) {
       },
       plugins: [
         nodeResolve(),
-        typescript(),
+        typescript({
+          compilerOptions: {
+            outDir: './dist',
+          },
+        }),
       ],
     };
   }
@@ -29,9 +33,10 @@ function getCodeMirrorBuildConfig(type) {
     plugins: [
       typescript({
         compilerOptions: {
+          outDir: './lib',
           rootDir: './src',
           declaration: true,
-          declarationDir: './types',
+          declarationDir: './lib',
         },
       }),
     ],
