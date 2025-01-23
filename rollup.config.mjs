@@ -28,9 +28,10 @@ function getCodeMirrorBuildConfig(type) {
     output: {
       file: './lib/codemirror.js',
       format: 'es',
-      sourcemap: true,
+      sourcemap: false,
     },
     plugins: [
+      nodeResolve(),
       typescript({
         compilerOptions: {
           outDir: './lib',
